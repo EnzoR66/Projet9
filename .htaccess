@@ -1,4 +1,4 @@
-location ~* \.(jpg|jpeg|png|gif|ico|css|js|woff2|svg)$ {
+location ~* \.(jpg|jpeg|png|gif|ico|css|js|woff2|svg|webp)$ {
     expires 7d;
     add_header Cache-Control "public, max-age=604800";
 }
