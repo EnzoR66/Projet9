@@ -1,8 +1,10 @@
-SetOutputFilter DEFLATE
-AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/x-javascript
+# Activation de la mise en cache
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 year"
+</IfModule>
 
-
-BrowserMatch ^Mozilla/4 gzip-only-text/html
-BrowserMatch ^Mozilla/4\.0[678] no-gzip
-BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
-BrowserMatch \bMSI[E] !no-gzip !gzip-only-text/html
+# Mise en cache des images, CSS et JavaScript pendant un mois
+<FilesMatch "\.(jpg|jpeg|png|gif|css|js)$">
+    ExpiresDefault "access plus 1 month"
+</FilesMatch>
