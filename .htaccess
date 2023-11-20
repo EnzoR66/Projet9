@@ -1,10 +1,4 @@
-# Activation de la mise en cache
-<IfModule mod_expires.c>
-    ExpiresActive On
-    ExpiresDefault "access plus 1 year"
-</IfModule>
-
-# Mise en cache des images, CSS et JavaScript pendant un mois
-<FilesMatch "\.(jpg|jpeg|png|gif|css|js)$">
-    ExpiresDefault "access plus 1 month"
-</FilesMatch>
+location ~* \.(jpg|jpeg|png|gif|css|js)$ {
+    expires 1y;
+    add_header Cache-Control "public, max-age=31536000";
+}
