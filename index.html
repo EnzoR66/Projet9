@@ -3,7 +3,8 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
-	<link rel="stylesheet" rel="preload" href="assets/style.min.css" as="style">
+	<link rel="stylesheet" href="assets/style.min.css">
+	<link rel="preload" href="assets/style.min.css" as="style">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap" rel="stylesheet">
@@ -134,7 +135,11 @@ passionnée par son métier elle réalise des clichés à l'occasion de concert,
 </section>
 <section id="about">
 	<div class="picture left">
-		<img src="assets/images/nina.webp" width="550" height="550" alt="Photo de Nina Carducci la photographe">
+		<picture>
+			<source srcset="assets/images/format/nina-1.webp" type="image/webp" media="(max-width: 650px)">
+			<source srcset="assets/images/format/nina-3.webp" type="image/webp">
+			<img src="assets/images/format/nina-2.jpg" alt="Photo de la photographe Nina Carducci">
+		</picture>
 	</div>
 	<div id="about-me">
 		<h3 class="about-me__title">A propos de moi</h3>
